@@ -50,7 +50,7 @@ ADD wrapper.py /app/wrapper.py
 ADD descriptor.json /app/descriptor.json
 
 # Create the tmp-directory
-RUN mkdir -p /tmp && \ chmod -R a+rwx /tmp
+RUN mkdir -p /tmp && chmod -R a+rwx /tmp
 
 # changing access rights to the app folder
 RUN chmod -R a+rx /app
