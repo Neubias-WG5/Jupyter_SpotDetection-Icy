@@ -32,7 +32,7 @@ RUN chmod -R a+rwx /icy
 # ---------------------------------------------------------------------------------------------------------------------
 # Install Neubias-W5-Utilities (annotation exporter, compute metrics, helpers,...)
 RUN cd / && git clone https://github.com/Neubias-WG5/neubiaswg5-utilities.git && \
-       cd /neubiaswg5-utilities/ && git checkout tags/v0.8.2 && pip install .
+       cd /neubiaswg5-utilities/ && git checkout tags/v0.8.3 && pip install .
 
 # install utilities binaries
 RUN chmod +x /neubiaswg5-utilities/bin/*
@@ -48,6 +48,9 @@ ADD wrapper.py /app/wrapper.py
 
 # for running the wrapper locally
 ADD descriptor.json /app/descriptor.json
+
+# Create the tmp-directory
+RUN mkdir -p /tmp && \ chmod -R a+rwx /tmp
 
 # changing access rights to the app folder
 RUN chmod -R a+rx /app
