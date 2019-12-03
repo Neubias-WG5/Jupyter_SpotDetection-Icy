@@ -18,7 +18,7 @@ RUN rm -r /Cytomine-python-client
 RUN apt-get update && apt-get install -y unzip wget && \
     mkdir -p /icy && \
     cd /icy && \
-    wget -O icy.zip https://drive.google.com/uc?export=download&confirm=CdMz&id=1oiZ-L_zHvsR-yRqoEPaRt8WONZtnqtbu && \
+    wget -O icy.zip http://dev.mri.cnrs.fr/attachments/download/2139/icy_1.9.9.1_with_plugins.zip && \
     unzip icy.zip && \
     rm -rf icy.zip
 
